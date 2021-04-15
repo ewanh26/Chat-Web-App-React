@@ -32,13 +32,17 @@ let Chatbox: FC<ChatboxProps> = ({ className }) => {
 
     return (
         <div className={className}>
-            {messages.map((message: MessageProps) => (
-                <Message
-                    text={message.text}
-                    author={message.author}
-                    timeSent={message.timeSent}
-                />
-            ))}
+            {messages.map((message: MessageProps) => {
+                let trueAuthor =
+                    message.author === author ? "You" : message.author;
+                return (
+                    <Message
+                        text={message.text}
+                        author={trueAuthor}
+                        timeSent={message.timeSent}
+                    />
+                );
+            })}
         </div>
     );
 };
