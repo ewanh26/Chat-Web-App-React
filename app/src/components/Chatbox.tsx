@@ -2,8 +2,9 @@ import React, { FC, useEffect, useState } from "react";
 import { MessageProps } from "./Message";
 import Message from "./Message";
 import { io } from "socket.io-client";
-const socket = io("http://localhost:3001");
-
+export const socket = io("http://localhost:3001");
+let authorNullable = prompt("Name:", "anonymous");
+export let author = authorNullable === null ? "anonymous" : authorNullable;
 export interface ChatboxProps {
     className: string;
 }
@@ -32,7 +33,11 @@ let Chatbox: FC<ChatboxProps> = ({ className }) => {
     return (
         <div className={className}>
             {messages.map((message: MessageProps) => (
-                <Message text={message.text} timeSent={message.timeSent} />
+                <Message
+                    text={message.text}
+                    author={message.author}
+                    timeSent={message.timeSent}
+                />
             ))}
         </div>
     );

@@ -14,5 +14,5 @@ Open localhost port 3000 on two separate tabs, and both will update in real time
 ---
 
 -   [x] Get it running on localhost
--   [ ] Add an "author" system (who sent it)
+-   [x] Add an "author" system (who sent it)
 -   [ ] Deploy on Heroku
