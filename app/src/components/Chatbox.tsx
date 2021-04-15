@@ -34,7 +34,9 @@ let Chatbox: FC<ChatboxProps> = ({ className }) => {
         <div className={className}>
             {messages.map((message: MessageProps) => {
                 let trueAuthor =
-                    message.author === author ? "You" : message.author;
+                    message.author === author && message.author !== "anonymous"
+                        ? "You"
+                        : message.author;
                 return (
                     <Message
                         text={message.text}
