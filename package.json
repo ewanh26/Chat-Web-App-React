@@ -1,0 +1,27 @@
+{
+    "name": "chatwebapp",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "dependencies": {
+        "@types/axios": "^0.14.0",
+        "@types/express": "^4.17.11",
+        "@types/socket.io": "^2.1.13",
+        "axios": "^0.21.1",
+        "body-parser": "^1.19.0",
+        "express": "^4.17.1",
+        "request": "^2.88.2",
+        "socket.io": "^4.0.1"
+    },
+    "devDependencies": {},
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node server/index.js",
+        "build": "cd app && npm install && npm run build"
+    },
+    "author": "",
+    "license": "ISC",
+    "engines": {
+        "node": "4.16.1"
+    }
+}

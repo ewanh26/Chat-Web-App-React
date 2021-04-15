@@ -1,0 +1,11 @@
+{
+    "compileOnSave": true,
+    "compilerOptions": {
+        "target": "ES2020",
+        "watch": true,
+        "rootDir": "..",
+        "module": "CommonJS"
+    },
+    "include": ["index.ts"],
+    "exclude": ["**/app/**"]
+}
