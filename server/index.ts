@@ -1,4 +1,3 @@
-import { MessageProps } from "../app/src/components/Message";
 import { Socket } from "socket.io";
 import { Request, Response, Application } from "express";
 import { AxiosStatic } from "axios";
