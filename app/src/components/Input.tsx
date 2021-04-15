@@ -1,12 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { io } from "socket.io-client";
-const socket = io("http://localhost:3001");
-
-socket.on("connect", () => {
-    console.log(socket.active);
-});
-
+import { socket, author } from "./Chatbox";
 export interface InputProps {
     className: string;
 }
@@ -15,7 +9,11 @@ let Input: React.FC<InputProps> = ({ className }) => {
     const [text, setText] = useState("");
 
     const handleClick = () => {
-        socket.emit("message", { text: text, timeSent: new Date() });
+        socket.emit("message", {
+            text: text,
+            timeSent: new Date(),
+            author: author,
+        });
         setText("");
     };
 
