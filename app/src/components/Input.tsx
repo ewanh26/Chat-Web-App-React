@@ -25,7 +25,11 @@ let Input: React.FC<InputProps> = ({ className }) => {
                 onChange={e => setText(e.target.value)}
                 className={className}
             />
-            <button className="sendButton" onClick={() => handleClick()}>
+            <button
+                className="sendButton"
+                onClick={() => handleClick()}
+                //TODO: ON ENTER DO SAME THING
+            >
                 Send
             </button>
         </>

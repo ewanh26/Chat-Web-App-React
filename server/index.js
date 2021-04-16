@@ -1,6 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const express = require("express");
+const path = require("path");
 const axios = require("axios");
 const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 3001;
@@ -12,8 +13,9 @@ const io = require("socket.io")(server, {
         methods: ["POST", "GET"],
     },
 });
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+// app.get("/", (req: Request, res: Response) => {
+//     res.sendFile(path.resolve(__dirname, "../app/build/index.html"));
+// });
 app.post("/api", (req, res) => {
     res.send(req.body);
 });
