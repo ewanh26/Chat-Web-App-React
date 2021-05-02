@@ -1,4 +1,4 @@
-# Chat Web App, made with React
+# Chat Web App, made with React (ORIGINAL CODE)
 
 **A simple chat web app, made with Express, React and Socket.io.**
 
